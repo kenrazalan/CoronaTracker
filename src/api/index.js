@@ -16,3 +16,14 @@ export const fetchData = async (country)=>{
     }
 }
 
+export const fetchCountries = async ()=>{
+    try{
+        const {data: {countries}} = await axios.get(`${api}/countries`)
+        return countries.map(country=>{
+            return country.name
+        })
+    }catch(e){
+        return e;
+    }
+}
+

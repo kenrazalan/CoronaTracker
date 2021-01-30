@@ -2,12 +2,13 @@ import React from 'react';
 import {Typography,Card,CardContent,Grid} from '@material-ui/core'
 import CardComponent from './CardComponent'
 import './CardComponent.css'
+
  const Cards =({data:{confirmed, recovered, deaths, lastUpdate}})=>{
     if (!confirmed) {
         return 'Loading...';
       }
     return(
-        <div>
+        <div className="container">
             <Typography  gutterBottom variant="h4" component="h2">Global</Typography>
         <Grid container spacing={3} justify='center'>
             
