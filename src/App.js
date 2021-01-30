@@ -3,6 +3,7 @@ import './App.css';
 import {fetchData} from './api/index'
 import Cards from './components/Cards/Cards'
 import Country from './components/country/Country'
+import Chart from './components/Chart/Chart'
 import styled from 'styled-components'
 
 
@@ -35,6 +36,9 @@ function App() {
   const handleChange = async(country)=>{
     const data = await fetchData(country)
     setData(data)
+    setCountry(country)
+    console.log(country)
+    
   }
 
 
@@ -43,6 +47,7 @@ function App() {
     <div className="App">
       <Cards data={data}/>
       <Country handleChange={handleChange}/>
+      <Chart data={data} country={country}/>
     </div>
     </Wrapper>
   );

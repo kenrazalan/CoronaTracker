@@ -11,7 +11,7 @@ import Countup from 'react-countup'
                 <Typography gutterBottom>
                     {cardTitle}
                 </Typography>
-                <Typography>
+                <Typography variant="h5" component="h2">
                     <Countup start={0} end={value} duration={2.75}/>    
                        
                 </Typography>
